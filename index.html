@@ -94,11 +94,11 @@
           >
             <!-- triangle card -->
             <div class="card bg-base-100 shadow-xl">
-              <figure class="px-10 pt-10">
+              <figure class="px-10 pt-10 h-[250px]">
                 <img
                   src="./images/triangle.png"
                   alt="triangle"
-                  class="rounded-xl"
+                  class="rounded-xl w-full h-full"
                 />
               </figure>
               <div class="card-body items-center text-center">
@@ -106,7 +106,7 @@
                 <p>Area (A) = 0.5 x b x h</p>
                 <p class="text-[#414141] mt-5 mb-10">
                   <input
-                    class="bg-input-background w-[90px] rounded mr-2 pl-2 placeholder:text-[#414141]"
+                    class="bg-input-background w-[60px] rounded mr-2 pl-2 placeholder:text-[#414141]"
                     type="text"
                     name=""
                     id="triangle-base-field"
@@ -115,16 +115,19 @@
                   <span>cm</span>
 
                   <input
-                    class="bg-input-background w-[90px] rounded ml-4 pl-2 placeholder:text-[#414141]"
+                    class="bg-input-background w-[60px] rounded mx-2 pl-2 placeholder:text-[#414141]"
                     type="text"
                     name=""
-                    id="triangle-base-field"
+                    id="triangle-height-field"
                     placeholder="h"
                   />
                   <span>cm</span>
                 </p>
                 <div class="card-actions">
-                  <button class="btn bg-btn-primary text-white w-[300px]">
+                  <button
+                    onclick="triangleArea()"
+                    class="btn bg-btn-primary text-white w-[300px]"
+                  >
                     Calculate
                   </button>
                 </div>
@@ -132,11 +135,11 @@
             </div>
             <!-- Rectangle card -->
             <div class="card bg-base-100 shadow-xl">
-              <figure class="px-10 pt-10">
+              <figure class="px-10 pt-10 h-[250px]">
                 <img
                   src="./images/rectangle.png"
                   alt="rectangle"
-                  class="rounded-xl"
+                  class="rounded-xl w-full h-full"
                 />
               </figure>
               <div class="card-body items-center text-center">
@@ -144,25 +147,28 @@
                 <p>Area (A) = w x l</p>
                 <p class="text-[#414141] mt-5 mb-10">
                   <input
-                    class="bg-input-background w-[90px] rounded mr-2 pl-2 placeholder:text-[#414141]"
+                    class="bg-input-background w-[60px] rounded mr-2 pl-2 placeholder:text-[#414141]"
                     type="text"
                     name=""
-                    id="triangle-base-field"
+                    id="rectangle-width-field"
                     placeholder="w"
                   />
                   <span>cm</span>
 
                   <input
-                    class="bg-input-background w-[90px] rounded ml-4 pl-2 placeholder:text-[#414141]"
+                    class="bg-input-background w-[60px] rounded mx-2 pl-2 placeholder:text-[#414141]"
                     type="text"
                     name=""
-                    id="triangle-base-field"
+                    id="rectangle-length-field"
                     placeholder="l"
                   />
                   <span>cm</span>
                 </p>
                 <div class="card-actions">
-                  <button class="btn bg-btn-primary text-white w-[300px]">
+                  <button
+                    onclick="rectangleArea()"
+                    class="btn bg-btn-primary text-white w-[300px]"
+                  >
                     Calculate
                   </button>
                 </div>
@@ -170,11 +176,11 @@
             </div>
             <!-- Parallelogram card -->
             <div class="card bg-base-100 shadow-xl">
-              <figure class="px-10 pt-10">
+              <figure class="px-10 pt-10 h-[250px]">
                 <img
                   src="./images/parallelogram.png"
                   alt="parallelogram"
-                  class="rounded-xl"
+                  class="rounded-xl w-full h-full"
                 />
               </figure>
               <div class="card-body items-center text-center">
@@ -182,25 +188,28 @@
                 <p>Area (A) = b x h</p>
                 <p class="text-[#414141] mt-5 mb-10">
                   <input
-                    class="bg-input-background w-[90px] rounded mr-2 pl-2 placeholder:text-[#414141]"
+                    class="bg-input-background w-[60px] rounded mr-2 pl-2 placeholder:text-[#414141]"
                     type="text"
                     name=""
-                    id="triangle-base-field"
+                    id="parallelogram-base-field"
                     placeholder="b"
                   />
                   <span>cm</span>
 
                   <input
-                    class="bg-input-background w-[90px] rounded ml-4 pl-2 placeholder:text-[#414141]"
+                    class="bg-input-background w-[60px] rounded mx-2 pl-2 placeholder:text-[#414141]"
                     type="text"
                     name=""
-                    id="triangle-base-field"
+                    id="parallelogram-height-field"
                     placeholder="h"
                   />
                   <span>cm</span>
                 </p>
                 <div class="card-actions">
-                  <button class="btn bg-btn-primary text-white w-[300px]">
+                  <button
+                    onclick="parallelogramArea()"
+                    class="btn bg-btn-primary text-white w-[300px]"
+                  >
                     Calculate
                   </button>
                 </div>
@@ -208,11 +217,11 @@
             </div>
             <!-- Rhombus card -->
             <div class="card bg-base-100 shadow-xl">
-              <figure class="px-10 pt-10">
+              <figure class="px-10 pt-10 h-[250px]">
                 <img
                   src="./images/rhombus.png"
                   alt="rhombus"
-                  class="rounded-xl"
+                  class="rounded-xl w-full h-full"
                 />
               </figure>
               <div class="card-body items-center text-center">
@@ -220,25 +229,28 @@
                 <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
                 <p class="text-[#414141] mt-5 mb-10">
                   <input
-                    class="bg-input-background w-[90px] rounded mr-2 pl-2 placeholder:text-[#414141]"
+                    class="bg-input-background w-[60px] rounded mr-2 pl-2 placeholder:text-[#414141]"
                     type="text"
                     name=""
-                    id="triangle-base-field"
+                    id="rhombus-d1-field"
                     placeholder="b"
                   />
                   <span>cm</span>
 
                   <input
-                    class="bg-input-background w-[90px] rounded ml-4 pl-2 placeholder:text-[#414141]"
+                    class="bg-input-background w-[60px] rounded mx-2 pl-2 placeholder:text-[#414141]"
                     type="text"
                     name=""
-                    id="triangle-base-field"
+                    id="rhombus-d2-field"
                     placeholder="h"
                   />
                   <span>cm</span>
                 </p>
                 <div class="card-actions">
-                  <button class="btn bg-btn-primary text-white w-[300px]">
+                  <button
+                    onclick="rhombusArea()"
+                    class="btn bg-btn-primary text-white w-[300px]"
+                  >
                     Calculate
                   </button>
                 </div>
@@ -246,37 +258,40 @@
             </div>
             <!-- Pentagon card -->
             <div class="card bg-base-100 shadow-xl">
-              <figure class="px-10 pt-10">
+              <figure class="px-10 pt-10 h-[250px]">
                 <img
                   src="./images/pentagon.png"
                   alt="pentagon"
-                  class="rounded-xl"
+                  class="rounded-xl w-full h-full"
                 />
               </figure>
               <div class="card-body items-center text-center">
                 <h2 class="card-title mt-3 tb-3">Pentagon</h2>
-                <p>Area (A) = 0.5 x p x b</p>
+                <p>Area (A) = 0.5 x p x a</p>
                 <p class="text-[#414141] mt-5 mb-10">
                   <input
-                    class="bg-input-background w-[90px] rounded mr-2 pl-2 placeholder:text-[#414141]"
+                    class="bg-input-background w-[60px] rounded mr-2 pl-2 placeholder:text-[#414141]"
                     type="text"
                     name=""
-                    id="triangle-base-field"
+                    id="pentagon-perimeter-field"
                     placeholder="b"
                   />
                   <span>cm</span>
 
                   <input
-                    class="bg-input-background w-[90px] rounded ml-4 pl-2 placeholder:text-[#414141]"
+                    class="bg-input-background w-[60px] rounded mx-2 pl-2 placeholder:text-[#414141]"
                     type="text"
                     name=""
-                    id="triangle-base-field"
-                    placeholder="h"
+                    id="pentagon-apothem-field"
+                    placeholder="a"
                   />
                   <span>cm</span>
                 </p>
                 <div class="card-actions">
-                  <button class="btn bg-btn-primary text-white w-[300px]">
+                  <button
+                    onclick="pentagonArea()"
+                    class="btn bg-btn-primary text-white w-[300px]"
+                  >
                     Calculate
                   </button>
                 </div>
@@ -284,11 +299,11 @@
             </div>
             <!-- Ellipse card -->
             <div class="card bg-base-100 shadow-xl">
-              <figure class="px-10 pt-10">
+              <figure class="px-10 pt-10 h-[250px]">
                 <img
                   src="./images/ellipse.png"
                   alt="ellipse"
-                  class="rounded-xl"
+                  class="rounded-xl w-full h-full"
                 />
               </figure>
               <div class="card-body items-center text-center">
@@ -296,25 +311,28 @@
                 <p>Area (A) = &pi;ab</p>
                 <p class="text-[#414141] mt-5 mb-10">
                   <input
-                    class="bg-input-background w-[90px] rounded mr-2 pl-2 placeholder:text-[#414141]"
+                    class="bg-input-background w-[60px] rounded mr-2 pl-2 placeholder:text-[#414141]"
                     type="text"
                     name=""
-                    id="triangle-base-field"
+                    id="ellipse-aAxis-field"
                     placeholder="b"
                   />
                   <span>cm</span>
 
                   <input
-                    class="bg-input-background w-[90px] rounded ml-4 pl-2 placeholder:text-[#414141]"
+                    class="bg-input-background w-[60px] rounded mx-2 pl-2 placeholder:text-[#414141]"
                     type="text"
                     name=""
-                    id="triangle-base-field"
+                    id="ellipse-bAxis-field"
                     placeholder="h"
                   />
                   <span>cm</span>
                 </p>
                 <div class="card-actions">
-                  <button class="btn bg-btn-primary text-white w-[300px]">
+                  <button
+                    onclick="ellipseArea()"
+                    class="btn bg-btn-primary text-white w-[300px]"
+                  >
                     Calculate
                   </button>
                 </div>
@@ -322,11 +340,16 @@
             </div>
           </div>
           <!-- area calculation -->
-          <div class="w-[350px] text-center">
+          <div class="w-[400px]">
             <div
-              class="rounded-lg border border-[1px solid rgba(17, 17, 17, 0.1)] py-7"
+              class="rounded-lg border border-[1px solid rgba(17, 17, 17, 0.1)] p-7"
             >
-              <h4 class="font-bold font-xl underline">Area Calculation</h4>
+              <h4 class="font-bold font-xl underline text-center">
+                Area Calculation
+              </h4>
+              <div id="calculatedArea" class="">
+                
+              </div>
             </div>
           </div>
         </div>
