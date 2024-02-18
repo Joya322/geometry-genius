@@ -1,14 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geometry-Genius</title>
 
     <!-- tailwind cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <h1>hello</h1>
-</body>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- custom tailwind -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              header: "#1090D81A",
+              "btn-primary": "#1090D8",
+              "input-background": "#F1F1F1",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- custom css -->
+    <style>
+      .inter-font {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings: "slnt" 0;
+      }
+    </style>
+  </head>
+  <body class="inter-font">
+    <!-- header -->
+    <header class="mx-10">
+      <div class="navbar bg-header rounded-lg mt-5">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+          </div>
+          <a class="font-medium text-3xl py-5 px-10"
+            ><span class="font-bold text-[45px]">Interactive</span>
+            <br />
+            Geometry Genius</a
+          >
+        </div>
+        <div class="navbar-center hidden lg:flex"></div>
+        <div class="navbar-end pr-10">
+          <a class="btn bg-btn-primary text-white font-bold text-xl">Blog</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- main start -->
+    <main class="container mx-auto px-9 mt-12">
+      <section>
+        <!-- container -->
+        <div class="flex flex-col lg:flex-row gap-6">
+          <!-- shape container -->
+          <div
+            class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            <!-- triangle card -->
+            <div class="card bg-base-100 shadow-xl">
+              <figure class="px-10 pt-10">
+                <img
+                  src="./images/triangle.png"
+                  alt="triangle"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title mt-3 tb-3">Triangle</h2>
+                <p>Area (A) = 0.5 x b x h</p>
+                <p class="text-[#414141] mt-5 mb-10">
+                  <input
+                    class="bg-input-background w-[90px] rounded mr-2 pl-2 placeholder:text-[#414141]"
+                    type="text"
+                    name=""
+                    id="triangle-base-field"
+                    placeholder="b"
+                  />
+                  <span>cm</span>
+
+                  <input
+                    class="bg-input-background w-[90px] rounded ml-4 pl-2 placeholder:text-[#414141]"
+                    type="text"
+                    name=""
+                    id="triangle-base-field"
+                    placeholder="h"
+                  />
+                  <span>cm</span>
+                </p>
+                <div class="card-actions">
+                  <button class="btn bg-btn-primary text-white w-[300px]">
+                    Calculate
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Rectangle card -->
+            <div class="card bg-base-100 shadow-xl">
+              <figure class="px-10 pt-10">
+                <img
+                  src="./images/rectangle.png"
+                  alt="rectangle"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title mt-3 tb-3">Rectangle</h2>
+                <p>Area (A) = w x l</p>
+                <p class="text-[#414141] mt-5 mb-10">
+                  <input
+                    class="bg-input-background w-[90px] rounded mr-2 pl-2 placeholder:text-[#414141]"
+                    type="text"
+                    name=""
+                    id="triangle-base-field"
+                    placeholder="w"
+                  />
+                  <span>cm</span>
+
+                  <input
+                    class="bg-input-background w-[90px] rounded ml-4 pl-2 placeholder:text-[#414141]"
+                    type="text"
+                    name=""
+                    id="triangle-base-field"
+                    placeholder="l"
+                  />
+                  <span>cm</span>
+                </p>
+                <div class="card-actions">
+                  <button class="btn bg-btn-primary text-white w-[300px]">
+                    Calculate
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Parallelogram card -->
+            <div class="card bg-base-100 shadow-xl">
+              <figure class="px-10 pt-10">
+                <img
+                  src="./images/parallelogram.png"
+                  alt="parallelogram"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title mt-3 tb-3">Parallelogram</h2>
+                <p>Area (A) = b x h</p>
+                <p class="text-[#414141] mt-5 mb-10">
+                  <input
+                    class="bg-input-background w-[90px] rounded mr-2 pl-2 placeholder:text-[#414141]"
+                    type="text"
+                    name=""
+                    id="triangle-base-field"
+                    placeholder="b"
+                  />
+                  <span>cm</span>
+
+                  <input
+                    class="bg-input-background w-[90px] rounded ml-4 pl-2 placeholder:text-[#414141]"
+                    type="text"
+                    name=""
+                    id="triangle-base-field"
+                    placeholder="h"
+                  />
+                  <span>cm</span>
+                </p>
+                <div class="card-actions">
+                  <button class="btn bg-btn-primary text-white w-[300px]">
+                    Calculate
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Rhombus card -->
+            <div class="card bg-base-100 shadow-xl">
+              <figure class="px-10 pt-10">
+                <img
+                  src="./images/rhombus.png"
+                  alt="rhombus"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title mt-3 tb-3">Rhombus</h2>
+                <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                <p class="text-[#414141] mt-5 mb-10">
+                  <input
+                    class="bg-input-background w-[90px] rounded mr-2 pl-2 placeholder:text-[#414141]"
+                    type="text"
+                    name=""
+                    id="triangle-base-field"
+                    placeholder="b"
+                  />
+                  <span>cm</span>
+
+                  <input
+                    class="bg-input-background w-[90px] rounded ml-4 pl-2 placeholder:text-[#414141]"
+                    type="text"
+                    name=""
+                    id="triangle-base-field"
+                    placeholder="h"
+                  />
+                  <span>cm</span>
+                </p>
+                <div class="card-actions">
+                  <button class="btn bg-btn-primary text-white w-[300px]">
+                    Calculate
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Pentagon card -->
+            <div class="card bg-base-100 shadow-xl">
+              <figure class="px-10 pt-10">
+                <img
+                  src="./images/pentagon.png"
+                  alt="pentagon"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title mt-3 tb-3">Pentagon</h2>
+                <p>Area (A) = 0.5 x p x b</p>
+                <p class="text-[#414141] mt-5 mb-10">
+                  <input
+                    class="bg-input-background w-[90px] rounded mr-2 pl-2 placeholder:text-[#414141]"
+                    type="text"
+                    name=""
+                    id="triangle-base-field"
+                    placeholder="b"
+                  />
+                  <span>cm</span>
+
+                  <input
+                    class="bg-input-background w-[90px] rounded ml-4 pl-2 placeholder:text-[#414141]"
+                    type="text"
+                    name=""
+                    id="triangle-base-field"
+                    placeholder="h"
+                  />
+                  <span>cm</span>
+                </p>
+                <div class="card-actions">
+                  <button class="btn bg-btn-primary text-white w-[300px]">
+                    Calculate
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Ellipse card -->
+            <div class="card bg-base-100 shadow-xl">
+              <figure class="px-10 pt-10">
+                <img
+                  src="./images/ellipse.png"
+                  alt="ellipse"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title mt-3 tb-3">Ellipse</h2>
+                <p>Area (A) = &pi;ab</p>
+                <p class="text-[#414141] mt-5 mb-10">
+                  <input
+                    class="bg-input-background w-[90px] rounded mr-2 pl-2 placeholder:text-[#414141]"
+                    type="text"
+                    name=""
+                    id="triangle-base-field"
+                    placeholder="b"
+                  />
+                  <span>cm</span>
+
+                  <input
+                    class="bg-input-background w-[90px] rounded ml-4 pl-2 placeholder:text-[#414141]"
+                    type="text"
+                    name=""
+                    id="triangle-base-field"
+                    placeholder="h"
+                  />
+                  <span>cm</span>
+                </p>
+                <div class="card-actions">
+                  <button class="btn bg-btn-primary text-white w-[300px]">
+                    Calculate
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- area calculation -->
+          <div class="w-[350px] text-center">
+            <div
+              class="rounded-lg border border-[1px solid rgba(17, 17, 17, 0.1)] py-7"
+            >
+              <h4 class="font-bold font-xl underline">Area Calculation</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- js -->
+    <script src="./scripts/areaCalculation.js"></script>
+  </body>
 </html>
